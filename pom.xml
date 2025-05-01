@@ -89,5 +89,19 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <!-- Update the Surefire Plugin configuration -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M7</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <!-- Ensure the correct relative path to testng.xml -->
+                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>

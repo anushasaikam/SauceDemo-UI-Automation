@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite" parallel="methods" thread-count="2">
-    <test name="Chrome Test">
-        <parameter name="browser" value="chrome"/>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SauceDemo Test Suite">
+    <!-- Define multiple tests if needed -->
+    <test name="Login Test">
         <classes>
+            <!-- Ensure the class name matches the actual package and class -->
             <class name="com.automation.tests.LoginTest"/>
         </classes>
     </test>
