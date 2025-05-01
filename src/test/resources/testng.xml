@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="SauceDemo Test Suite">
+<suite name="Ui Automation Suite" parallel="tests" thread-count="4">
+
+ <!-- Register your ExtentReports listener -->
+  <listeners>
+    <listener class-name="com.automation.listeners.ExtentReportListener"/>
+  </listeners>
+  
     <!-- Define multiple tests if needed -->
     <test name="Login Test">
         <classes>

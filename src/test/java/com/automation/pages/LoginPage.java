@@ -18,16 +18,19 @@ public class LoginPage {
     }
 
     // Methods
-    public void enterUsername(String username) {
+    public LoginPage enterUsername(String username) {
         driver.findElement(usernameField).sendKeys(username);
+        return this;
     }
 
-    public void enterPassword(String password) {
+    public LoginPage enterPassword(String password) {
         driver.findElement(passwordField).sendKeys(password);
+        return this;
     }
 
-    public void clickLogin() {
+    public LoginPage clickLogin() {
         driver.findElement(loginButton).click();
+        return this;
     }
 }
 
