@@ -13,13 +13,13 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.automation.config.ConfigReader;
+import com.automation.factory.WebDriverFactory;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.automation.config.ConfigReader;
-import com.automation.factory.WebDriverFactory;
 
 /**
  * TestNG listener for ExtentReports reporting and screenshot capture.
@@ -92,7 +92,7 @@ public class ExtentReportListener implements ITestListener {
         try {
             FileUtils.copyFile(src, new File(screenshotPath));
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Failed to save screenshot: " + e.getMessage());
         }
         return screenshotPath;
     }
