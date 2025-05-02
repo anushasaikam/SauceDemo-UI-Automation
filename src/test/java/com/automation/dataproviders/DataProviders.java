@@ -1,13 +1,14 @@
 package com.automation.dataproviders;
 
 import org.testng.annotations.DataProvider;
+import com.automation.utils.CsvUtils;
 
 public class DataProviders {
+
     @DataProvider(name = "loginData")
     public Object[][] loginData() {
-        return new Object[][] {
-            {"standard_user", "secret_sauce", "Swag Labs"},
-            {"locked_out_user", "secret_sauce", "Swag Labs"}
-        };
+        String path = System.getProperty("user.dir") + "/src/test/resources/testdata/LoginData.csv";
+        System.out.println("Reading CSV file from: " + path); // Debugging log
+        return CsvUtils.getCsvData(path);
     }
 }

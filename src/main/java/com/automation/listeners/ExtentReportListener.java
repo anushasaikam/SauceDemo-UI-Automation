@@ -18,8 +18,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.automation.config.ConfigReader;
 import com.automation.factory.WebDriverFactory;
-import com.automation.utils.ConfigReader; // Ensure this is the correct package for ConfigReader
 
 /**
  * TestNG listener for ExtentReports reporting and screenshot capture.

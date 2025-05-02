@@ -9,7 +9,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-import com.automation.utils.ConfigReader;
+import com.automation.config.ConfigReader;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 

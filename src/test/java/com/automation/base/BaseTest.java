@@ -5,7 +5,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import com.automation.factory.WebDriverFactory;
-import com.automation.utils.ConfigReader;
 
 /**
  * Base test class that initializes and quits WebDriver via WebDriverFactory.
